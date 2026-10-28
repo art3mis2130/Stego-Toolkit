@@ -74,3 +74,7 @@ python app.py
 The app creates `uploads/` and `outputs/` when it starts. Those folders are runtime storage, not missing source directories. Keep encoded images in a lossless format and use the same bit depth during extraction. Text normalization can remove the invisible characters used by text steganography; PDF metadata tools can remove the embedded metadata field.
 
 The supplied entry point enables Flask debug mode for local development. The live-message handlers receive passphrases on the server, so this implementation should not be described as end-to-end encryption. The anomaly scanner's results are indicators, not proof that an image contains a hidden message. No production security audit or runtime test is implied by this source upload.
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
