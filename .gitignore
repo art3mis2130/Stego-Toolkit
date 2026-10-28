@@ -1,0 +1,60 @@
+# --- StegoToolkit Specific ---
+uploads/            # Never track user-uploaded images
+outputs/            # Never track generated stego-images or heatmaps
+*.png               # Ignore loose images (except those in static/)
+!static/**/*.png    # Do NOT ignore your UI assets or favicon
+
+# --- Python & Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env                # Critical: Ignore secret keys/environment variables
+venv/
+env/
+ENV/
+.venv/
+stego-env/       
+outputs/
+
+# --- Cryptography & Security ---
+*.pem
+*.key
+*.pub
+*.crt
+.ipynb_checkpoints/ # If you used Jupyter for ML testing
+
+# --- OS Specific ---
+.DS_Store           # macOS
+Thumbs.db           # Windows
+desktop.ini         # Windows
+
+# --- Distribution / Build ---
+dist/
+build/
+*.egg-info/
+*.zip               # Ignore the batch processing output zips
+
+# --- ML Training Data ---
+training_data/      # Ignore the entire training folder
+temp_train.png      # Ignore the temporary stego file created during training
+stego_model.pkl     # Optional: Ignore the model if you want to retrain on each machine
+                    # (Keep it if you want the "brain" to stay with the code)
+
+# --- General Housekeeping ---
+.DS_Store           # macOS garbage
+Thumbs.db           # Windows garbage
+__pycache__/        # Python bytecode
+uploads/
+
+# Ignore the entire training folder and its contents
+training_data/
+
+# Ignore any temporary files created during the script run
+temp_train.png
+
+# Ignore the model if you don't want to commit it
+stego_model.pkl
+
+# Ignore any loose images in the root (but keep static folder)
+*.png
+!static/
